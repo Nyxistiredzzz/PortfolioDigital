@@ -592,6 +592,43 @@ ul {
     transform: translateY(-3px);
 }
 
+.cv-download {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.cv-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+}
+
+.cv-btn i {
+    font-size: 1rem;
+}
+
+.cv-note {
+    margin-top: 1rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
 /* Screenshots Section */
 .screenshots {
     padding: 100px 0;
