@@ -531,9 +531,8 @@ ul {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-info h3 {
@@ -591,44 +590,6 @@ ul {
 
 .social-link:hover {
     transform: translateY(-3px);
-}
-
-.contact-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h3 {
-    color: #2c3e50;
-    margin-bottom: 2rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
 }
 
 /* Screenshots Section */
@@ -835,8 +796,7 @@ ul {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        justify-content: center;
     }
 
     .competencies-grid {

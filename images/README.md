@@ -4,27 +4,31 @@ Aquesta carpeta està destinada a guardar les captures de pantalla dels teus pro
 
 ## 📸 Com afegir les teves captures:
 
-### 1. Formats recomanats:
+### 1\. Formats recomanats:
+
 - **Formats**: JPG, PNG, WebP
 - **Mides**: 800x600px o superiors
 - **Qualitat**: Alta resolució per a millor visualització
 
-### 2. Nomenclatura suggerida:
+### 2\. Nomenclatura suggerida:
+
 - `project1-screenshot.jpg` - Pàgina Web Corporativa
-- `project2-screenshot.jpg` - Sistema de Gestió d'Inventari  
+- `project2-screenshot.jpg` - Sistema de Gestió d'Inventari
 - `project3-screenshot.jpg` - App de Gestió de Tasques
 - `project4-screenshot.jpg` - Dashboard d'Analítica
 
-### 3. Optimització:
+### 3\. Optimització:
+
 - Comprimeix les imatges per reduir la mida dels fitxers
 - Utilitza eines com TinyPNG o similars
 - Mantén una bona qualitat visual
 
-### 4. Substitució als fitxers HTML:
+### 4\. Substitució als fitxers HTML:
 
 Quan tinguis les imatges, substitueix els placeholders a `index.html`:
 
 **Canvia això:**
+
 ```html
 <div class="screenshot-placeholder">
     <i class="fas fa-image"></i>
@@ -34,17 +38,20 @@ Quan tinguis les imatges, substitueix els placeholders a `index.html`:
 ```
 
 **Per això:**
+
 ```html
 <img src="images/project1-screenshot.jpg" alt="Captura del Projecte 1" class="screenshot-image">
 ```
 
-### 5. Tipus de captures recomanades:
+### 5\. Tipus de captures recomanades:
+
 - **Vista principal** de l'aplicació o web
 - **Funcionalitats clau** en acció
 - **Interfície d'usuari** més destacada
 - **Resultats** o output del projecte
 
-### 6. Exemples de bones captures:
+### 6\. Exemples de bones captures:
+
 - Pàgina d'inici de la web corporativa
 - Dashboard principal del sistema d'inventari
 - Interfície de gestió de tasques
