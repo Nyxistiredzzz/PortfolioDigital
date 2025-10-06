@@ -5,6 +5,7 @@ Aquesta carpeta conté els documents descarregables del portfolio.
 ## 📄 Fitxers:
 
 ### CV_Arnau_Barcelo.pdf
+
 - **Descripció:** Curriculum vitae d'Arnau Barceló González
 - **Idioma:** Català
 - **Format:** PDF
@@ -12,7 +13,8 @@ Aquesta carpeta conté els documents descarregables del portfolio.
 - **Actualització:** Octubre 2025
 - **Estat:** ✅ CREAT (generat a partir de l'HTML)
 
-### CV_Arnau_Barcelo.html  
+### CV_Arnau_Barcelo.html
+
 - **Descripció:** Versió HTML del CV (base per generar PDF)
 - **Disseny:** Recreació exacta de la captura proporcionada
 - **Estil:** Minimalista i professional amb logo AB

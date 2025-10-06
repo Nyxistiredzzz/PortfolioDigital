@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Arnau Barceló González</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,7 +14,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 11px;
             line-height: 1.4;
             color: #333;
@@ -21,201 +23,177 @@
 
         .cv-container {
             width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
             margin: 0 auto;
             background: white;
-            display: flex;
             position: relative;
+            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
-        /* Línea vertical decorativa */
-        .vertical-line {
+        /* Línea vertical central */
+        .divider-line {
             position: absolute;
-            left: 45mm;
+            left: 70mm;
             top: 0;
             width: 1px;
             height: 100%;
-            background: #333;
+            background: #ddd;
         }
 
-        .vertical-line-right {
-            position: absolute;
-            right: 45mm;
-            top: 0;
-            width: 1px;
-            height: 100%;
-            background: #333;
-        }
-
-        /* Logo AB */
+        /* Logo circular */
         .logo {
             position: absolute;
-            top: 15mm;
-            right: 15mm;
-            width: 25mm;
-            height: 25mm;
-            border: 1px solid #333;
+            top: 20mm;
+            right: 20mm;
+            width: 30mm;
+            height: 30mm;
+            border: 2px solid #333;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
             background: white;
+            z-index: 10;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        /* Header */
+        .header {
+            position: absolute;
+            top: 20mm;
+            left: 20mm;
+            right: 60mm;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3mm;
+            letter-spacing: 3px;
+        }
+
+        .job-title {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
 
         /* Columna izquierda */
         .left-column {
-            width: 45mm;
-            padding: 15mm 10mm 15mm 15mm;
+            width: 70mm;
             background: #f8f8f8;
+            padding: 55mm 12mm 15mm 15mm;
         }
 
         /* Columna derecha */
         .right-column {
             flex: 1;
-            padding: 15mm 15mm 15mm 15mm;
-            padding-right: 50mm;
+            padding: 55mm 15mm 15mm 15mm;
+            background: white;
         }
 
-        /* Header */
-        .header {
-            margin-bottom: 20mm;
-        }
-
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 3mm;
-            color: #333;
-        }
-
-        .title {
-            font-size: 12px;
-            color: #666;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Secciones */
-        .section {
-            margin-bottom: 15mm;
-        }
-
+        /* Títulos de sección */
         .section-title {
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 5mm;
             color: #333;
+            margin-bottom: 6mm;
+            margin-top: 10mm;
         }
 
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        /* CONTACTES */
         .contact-item {
-            margin-bottom: 3mm;
             display: flex;
             align-items: flex-start;
-            gap: 3mm;
-        }
-
-        .contact-icon {
-            width: 3mm;
-            flex-shrink: 0;
-            text-align: center;
-            margin-top: 0.5mm;
-        }
-
-        .contact-text {
-            flex: 1;
-            font-size: 10px;
+            margin-bottom: 4mm;
+            font-size: 9px;
             line-height: 1.3;
         }
 
-        /* Habilidades */
+        .contact-icon {
+            margin-right: 4mm;
+            font-size: 12px;
+            color: #666;
+            width: 15px;
+            text-align: center;
+        }
+
+        .contact-text {
+            color: #333;
+            flex: 1;
+        }
+
+        /* HABILITATS */
         .skill-item {
+            margin-bottom: 4mm;
+        }
+
+        .skill-text {
+            font-size: 9px;
+            color: #333;
             margin-bottom: 2mm;
-            font-size: 10px;
+            line-height: 1.2;
         }
 
         .skill-bar {
             width: 100%;
-            height: 2mm;
+            height: 5px;
             background: #e0e0e0;
-            margin-top: 1mm;
-            position: relative;
+            border-radius: 3px;
+            overflow: hidden;
         }
 
         .skill-progress {
             height: 100%;
             background: #333;
+            border-radius: 3px;
         }
 
-        /* Formación y experiencia */
-        .experience-item {
-            margin-bottom: 8mm;
-        }
-
-        .experience-title {
-            font-size: 11px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 1mm;
-        }
-
-        .experience-subtitle {
-            font-size: 10px;
-            color: #666;
-            margin-bottom: 1mm;
-        }
-
-        .experience-date {
-            font-size: 9px;
-            color: #999;
-            margin-bottom: 2mm;
-        }
-
-        .experience-description {
-            font-size: 10px;
-            line-height: 1.4;
-        }
-
-        .experience-list {
-            margin-top: 2mm;
-            padding-left: 4mm;
-        }
-
-        .experience-list li {
-            font-size: 9px;
-            margin-bottom: 1mm;
-            color: #666;
-        }
-
-        /* Enlaces */
+        /* ENLLAÇOS */
         .link-item {
-            margin-bottom: 2mm;
-            font-size: 9px;
+            margin-bottom: 4mm;
         }
 
-        .link-title {
-            font-weight: bold;
-            margin-bottom: 0.5mm;
-        }
-
-        .link-url {
-            color: #666;
-            word-break: break-all;
-        }
-
-        /* Idiomas */
-        .language-item {
-            margin-bottom: 2mm;
+        .link-text {
             font-size: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .link-text:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        /* IDIOMES */
+        .language-item {
+            margin-bottom: 4mm;
         }
 
         .language-name {
-            font-weight: bold;
-            margin-bottom: 0.5mm;
+            font-size: 10px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1mm;
         }
 
         .language-level {
@@ -223,12 +201,63 @@
             color: #666;
         }
 
-        /* Líneas horizontales */
+        /* Contenido derecho */
+        .content-section {
+            margin-bottom: 8mm;
+        }
+
+        .content-text {
+            font-size: 10px;
+            line-height: 1.4;
+            color: #333;
+            text-align: justify;
+        }
+
+        /* Formación y práctica */
+        .education-item {
+            margin-bottom: 6mm;
+        }
+
+        .education-title {
+            font-size: 10px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 1mm;
+            line-height: 1.2;
+        }
+
+        .education-year {
+            font-size: 9px;
+            color: #666;
+            margin-bottom: 2mm;
+            font-weight: 500;
+        }
+
+        .education-list {
+            padding-left: 4mm;
+            margin-top: 1mm;
+        }
+
+        .education-list li {
+            font-size: 9px;
+            color: #666;
+            margin-bottom: 1mm;
+            line-height: 1.2;
+        }
+
+        .practice-description {
+            font-size: 10px;
+            color: #666;
+            margin-top: 2mm;
+            font-style: italic;
+        }
+
+        /* Separadores */
         .divider {
             width: 100%;
-            height: 0.5px;
-            background: #ccc;
-            margin: 8mm 0;
+            height: 1px;
+            background: #ddd;
+            margin: 6mm 0;
         }
 
         @media print {
@@ -236,137 +265,140 @@
                 margin: 0;
                 background: white;
             }
-            
+
             .cv-container {
                 width: 100%;
+                height: 100%;
                 margin: 0;
                 box-shadow: none;
+            }
+
+            .link-text {
+                color: #2563eb !important;
+                text-decoration: none !important;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="cv-container">
-        <!-- Líneas decorativas -->
-        <div class="vertical-line"></div>
-        <div class="vertical-line-right"></div>
-        
+        <!-- Línea divisoria -->
+        <div class="divider-line"></div>
+
         <!-- Logo -->
         <div class="logo">
-            AB
+            <span class="logo-text">AB</span>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">ARNAU BARCELÓ</h1>
+            <div class="job-title">Desenvolupador Web</div>
         </div>
 
         <!-- Columna izquierda -->
         <div class="left-column">
-            <!-- Contactos -->
-            <div class="section">
-                <h2 class="section-title">CONTACTES</h2>
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-text">618 73 10 84</div>
+            <!-- CONTACTES -->
+            <div class="section-title">CONTACTES</div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">618 73 10 84</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-text">abarcelo1@insjoaquimmir.cat</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">Avinguda Francesc Macià, 147<br>Vilanova i la Geltrú, 08800<br>Spain</div>
+            </div>
+
+            <!-- HABILITATS -->
+            <div class="section-title">HABILITATS</div>
+            <div class="skill-item">
+                <div class="skill-text">Habilitats comunicatives</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
-                    <div class="contact-text">abarcelo1@insjoaquimmir.cat</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-text">Capacitat per prioritzar i prendre decisions segons les necessitats</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-text">Avinguda Francesc Macià, 147, Vilanova i la Geltrú, 08800, Spain</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-text">Empatia</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-text">Treball en equip i iniciativa</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-text">Capacitat per assumir responsabilitats</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 92%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-text">Aprenentatge ràpid</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 93%"></div>
                 </div>
             </div>
 
-            <!-- Habilitats -->
-            <div class="section">
-                <h2 class="section-title">HABILITATS</h2>
-                <div class="skill-item">
-                    <div>Habilitats comunicatives</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div>Capacitat per prioritzar i prendre decisions segons les necessitats</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div>Empatia</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div>Treball en equip i iniciativa</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div>Capacitat per assumir responsabilitats</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div>Aprenentatge ràpid</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 93%"></div>
-                    </div>
-                </div>
+            <!-- ENLLAÇOS -->
+            <div class="section-title">ENLLAÇOS</div>
+            <div class="link-item">
+                <a href="https://www.linkedin.com/in/arnaubarcelo" target="_blank" class="link-text">LinkedIn</a>
+            </div>
+            <div class="link-item">
+                <a href="https://github.com/Nyxistiredzzz" target="_blank" class="link-text">Portfolio Digital</a>
             </div>
 
-            <!-- Enllaços -->
-            <div class="section">
-                <h2 class="section-title">ENLLAÇOS</h2>
-                <div class="link-item">
-                    <div class="link-title">LinkedIn</div>
-                    <div class="link-url">https://www.linkedin.com/in/arnaubarcelo</div>
-                </div>
-                <div class="link-item">
-                    <div class="link-title">Portfolio Digital</div>
-                    <div class="link-url">https://github.com/Nyxistiredzzz</div>
-                </div>
+            <!-- IDIOMES -->
+            <div class="section-title">IDIOMES</div>
+            <div class="language-item">
+                <div class="language-name">Castellà i Català</div>
+                <div class="language-level">Natiu</div>
             </div>
-
-            <!-- Idiomes -->
-            <div class="section">
-                <h2 class="section-title">IDIOMES</h2>
-                <div class="language-item">
-                    <div class="language-name">Castellà i Català</div>
-                    <div class="language-level">Natiu</div>
-                </div>
-                <div class="language-item">
-                    <div class="language-name">Anglès</div>
-                    <div class="language-level">Intermig-Alt</div>
-                </div>
+            <div class="language-item">
+                <div class="language-name">Anglès</div>
+                <div class="language-level">Intermig-Alt</div>
             </div>
         </div>
 
         <!-- Columna derecha -->
         <div class="right-column">
-            <!-- Header -->
-            <div class="header">
-                <h1 class="name">ARNAU BARCELÓ</h1>
-                <p class="title">DESENVOLUPADOR WEB</p>
-            </div>
-
-            <!-- Sobre Mi -->
-            <div class="section">
-                <h2 class="section-title">SOBRE MI</h2>
-                <p>Sóc un estudiant de desenvolupament web dinàmic i proactiu, amb una forta capacitat d'aprenentatge i una sòlida base en llenguatges de programació com PHP, Python, JavaScript i TypeScript. La meva experiència inclou treballar amb frameworks com Laravel i Flask, demostrant la meva adaptabilitat i competència en l'entorn del desenvolupament web modern.</p>
+            <!-- SOBRE MI -->
+            <div class="content-section">
+                <div class="section-title">SOBRE MI</div>
+                <div class="content-text">
+                    Sóc un estudiant de desenvolupament web dinàmic i proactiu, amb una forta capacitat d'aprenentatge i
+                    una sòlida base en llenguatges de programació com PHP, Python, JavaScript i TypeScript. La meva
+                    experiència inclou treballar amb frameworks com Laravel i Flask, demostrant la meva adaptabilitat i
+                    competència en l'entorn del desenvolupament web modern.
+                </div>
             </div>
 
             <div class="divider"></div>
 
-            <!-- Formació -->
-            <div class="section">
-                <h2 class="section-title">FORMACIÓ</h2>
-                
-                <div class="experience-item">
-                    <div class="experience-title">Primer de CFGS Desenvolupament d'aplicacions web, INS Joaquim Mir, Vilanova i la Geltrú</div>
-                    <div class="experience-date">2024</div>
-                    <ul class="experience-list">
+            <!-- FORMACIÓ -->
+            <div class="content-section">
+                <div class="section-title">FORMACIÓ</div>
+
+                <div class="education-item">
+                    <div class="education-title">Primer de CFGS Desenvolupament d'aplicacions web</div>
+                    <div class="education-title" style="color: #666; font-weight: 400;">INS Joaquim Mir, Vilanova i la
+                        Geltrú</div>
+                    <div class="education-year">2024</div>
+                    <ul class="education-list">
                         <li>Cicle Formatiu de Grau Superior en Desenvolupament d'Aplicacions Web</li>
                         <li>Coneixements avançats en programació</li>
                         <li>Domini de llenguatges de marques</li>
@@ -375,25 +407,30 @@
                     </ul>
                 </div>
 
-                <div class="experience-item">
-                    <div class="experience-title">Educació Secundària Obligatòria, IES Manuel de Cabanyes, Vilanova i la Geltrú</div>
-                    <div class="experience-date">2019</div>
+                <div class="education-item">
+                    <div class="education-title">Educació Secundària Obligatòria</div>
+                    <div class="education-title" style="color: #666; font-weight: 400;">IES Manuel de Cabanyes, Vilanova
+                        i la Geltrú</div>
+                    <div class="education-year">2019</div>
                 </div>
             </div>
 
             <div class="divider"></div>
 
-            <!-- Pràctica -->
-            <div class="section">
-                <h2 class="section-title">PRÀCTICA</h2>
-                
-                <div class="experience-item">
-                    <div class="experience-title">Desenvolupador Web, Institut Ernest Lluch i Martín, Cunit</div>
-                    <div class="experience-date">set 2025 - Presentar</div>
-                    <div class="experience-description">Desenvolupament d'una aplicació</div>
+            <!-- PRÀCTICA -->
+            <div class="content-section">
+                <div class="section-title">PRÀCTICA</div>
+
+                <div class="education-item">
+                    <div class="education-title">Desenvolupador Web</div>
+                    <div class="education-title" style="color: #666; font-weight: 400;">Institut Ernest Lluch i Martín,
+                        Cunit</div>
+                    <div class="education-year">Setembre 2025 - Present</div>
+                    <div class="practice-description">Desenvolupament d'una aplicació web completa</div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

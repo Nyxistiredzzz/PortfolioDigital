@@ -7,18 +7,19 @@ L'usuari pot després fer "Imprimir > Guardar com PDF"
 import webbrowser
 from pathlib import Path
 
+
 def open_cv_in_browser():
     """Obra el CV HTML al navegador per a conversió manual a PDF"""
-    
+
     html_file = Path(__file__).parent / "CV_Arnau_Barcelo.html"
-    
+
     if not html_file.exists():
         print(f"❌ ERROR: No s'ha trobat {html_file}")
         return False
-    
+
     # Converteix a URL absoluta
     file_url = html_file.as_uri()
-    
+
     print("🌐 Obrint el CV al navegador...")
     print(f"📄 Fitxer: {html_file}")
     print(f"🔗 URL: {file_url}")
@@ -36,7 +37,7 @@ def open_cv_in_browser():
     print("6. Anomena'l: 'CV_Arnau_Barcelo.pdf'")
     print("7. Guarda'l a la carpeta 'documents'")
     print()
-    
+
     try:
         webbrowser.open(file_url)
         print("✅ Navegador obert correctament!")
@@ -44,6 +45,7 @@ def open_cv_in_browser():
     except Exception as e:
         print(f"❌ Error obrint el navegador: {e}")
         return False
+
 
 if __name__ == "__main__":
     print("🎨 Generador de CV HTML - Arnau Barceló")
