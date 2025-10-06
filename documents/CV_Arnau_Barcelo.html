@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Arnau Barceló González</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+        }
+
+        .cv-container {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            display: flex;
+            position: relative;
+        }
+
+        /* Línea vertical decorativa */
+        .vertical-line {
+            position: absolute;
+            left: 45mm;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: #333;
+        }
+
+        .vertical-line-right {
+            position: absolute;
+            right: 45mm;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: #333;
+        }
+
+        /* Logo AB */
+        .logo {
+            position: absolute;
+            top: 15mm;
+            right: 15mm;
+            width: 25mm;
+            height: 25mm;
+            border: 1px solid #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            background: white;
+        }
+
+        /* Columna izquierda */
+        .left-column {
+            width: 45mm;
+            padding: 15mm 10mm 15mm 15mm;
+            background: #f8f8f8;
+        }
+
+        /* Columna derecha */
+        .right-column {
+            flex: 1;
+            padding: 15mm 15mm 15mm 15mm;
+            padding-right: 50mm;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 20mm;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 3mm;
+            color: #333;
+        }
+
+        .title {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Secciones */
+        .section {
+            margin-bottom: 15mm;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5mm;
+            color: #333;
+        }
+
+        .contact-item {
+            margin-bottom: 3mm;
+            display: flex;
+            align-items: flex-start;
+            gap: 3mm;
+        }
+
+        .contact-icon {
+            width: 3mm;
+            flex-shrink: 0;
+            text-align: center;
+            margin-top: 0.5mm;
+        }
+
+        .contact-text {
+            flex: 1;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        /* Habilidades */
+        .skill-item {
+            margin-bottom: 2mm;
+            font-size: 10px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 2mm;
+            background: #e0e0e0;
+            margin-top: 1mm;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #333;
+        }
+
+        /* Formación y experiencia */
+        .experience-item {
+            margin-bottom: 8mm;
+        }
+
+        .experience-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1mm;
+        }
+
+        .experience-subtitle {
+            font-size: 10px;
+            color: #666;
+            margin-bottom: 1mm;
+        }
+
+        .experience-date {
+            font-size: 9px;
+            color: #999;
+            margin-bottom: 2mm;
+        }
+
+        .experience-description {
+            font-size: 10px;
+            line-height: 1.4;
+        }
+
+        .experience-list {
+            margin-top: 2mm;
+            padding-left: 4mm;
+        }
+
+        .experience-list li {
+            font-size: 9px;
+            margin-bottom: 1mm;
+            color: #666;
+        }
+
+        /* Enlaces */
+        .link-item {
+            margin-bottom: 2mm;
+            font-size: 9px;
+        }
+
+        .link-title {
+            font-weight: bold;
+            margin-bottom: 0.5mm;
+        }
+
+        .link-url {
+            color: #666;
+            word-break: break-all;
+        }
+
+        /* Idiomas */
+        .language-item {
+            margin-bottom: 2mm;
+            font-size: 10px;
+        }
+
+        .language-name {
+            font-weight: bold;
+            margin-bottom: 0.5mm;
+        }
+
+        .language-level {
+            font-size: 9px;
+            color: #666;
+        }
+
+        /* Líneas horizontales */
+        .divider {
+            width: 100%;
+            height: 0.5px;
+            background: #ccc;
+            margin: 8mm 0;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                background: white;
+            }
+            
+            .cv-container {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Líneas decorativas -->
+        <div class="vertical-line"></div>
+        <div class="vertical-line-right"></div>
+        
+        <!-- Logo -->
+        <div class="logo">
+            AB
+        </div>
+
+        <!-- Columna izquierda -->
+        <div class="left-column">
+            <!-- Contactos -->
+            <div class="section">
+                <h2 class="section-title">CONTACTES</h2>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">618 73 10 84</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-text">abarcelo1@insjoaquimmir.cat</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">Avinguda Francesc Macià, 147, Vilanova i la Geltrú, 08800, Spain</div>
+                </div>
+            </div>
+
+            <!-- Habilitats -->
+            <div class="section">
+                <h2 class="section-title">HABILITATS</h2>
+                <div class="skill-item">
+                    <div>Habilitats comunicatives</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Capacitat per prioritzar i prendre decisions segons les necessitats</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Empatia</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Treball en equip i iniciativa</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Capacitat per assumir responsabilitats</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div>Aprenentatge ràpid</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 93%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enllaços -->
+            <div class="section">
+                <h2 class="section-title">ENLLAÇOS</h2>
+                <div class="link-item">
+                    <div class="link-title">LinkedIn</div>
+                    <div class="link-url">https://www.linkedin.com/in/arnaubarcelo</div>
+                </div>
+                <div class="link-item">
+                    <div class="link-title">Portfolio Digital</div>
+                    <div class="link-url">https://github.com/Nyxistiredzzz</div>
+                </div>
+            </div>
+
+            <!-- Idiomes -->
+            <div class="section">
+                <h2 class="section-title">IDIOMES</h2>
+                <div class="language-item">
+                    <div class="language-name">Castellà i Català</div>
+                    <div class="language-level">Natiu</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Anglès</div>
+                    <div class="language-level">Intermig-Alt</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="right-column">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="name">ARNAU BARCELÓ</h1>
+                <p class="title">DESENVOLUPADOR WEB</p>
+            </div>
+
+            <!-- Sobre Mi -->
+            <div class="section">
+                <h2 class="section-title">SOBRE MI</h2>
+                <p>Sóc un estudiant de desenvolupament web dinàmic i proactiu, amb una forta capacitat d'aprenentatge i una sòlida base en llenguatges de programació com PHP, Python, JavaScript i TypeScript. La meva experiència inclou treballar amb frameworks com Laravel i Flask, demostrant la meva adaptabilitat i competència en l'entorn del desenvolupament web modern.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Formació -->
+            <div class="section">
+                <h2 class="section-title">FORMACIÓ</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Primer de CFGS Desenvolupament d'aplicacions web, INS Joaquim Mir, Vilanova i la Geltrú</div>
+                    <div class="experience-date">2024</div>
+                    <ul class="experience-list">
+                        <li>Cicle Formatiu de Grau Superior en Desenvolupament d'Aplicacions Web</li>
+                        <li>Coneixements avançats en programació</li>
+                        <li>Domini de llenguatges de marques</li>
+                        <li>Gestió i disseny de bases de dades</li>
+                        <li>Administració de sistemes operatius</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Educació Secundària Obligatòria, IES Manuel de Cabanyes, Vilanova i la Geltrú</div>
+                    <div class="experience-date">2019</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Pràctica -->
+            <div class="section">
+                <h2 class="section-title">PRÀCTICA</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Desenvolupador Web, Institut Ernest Lluch i Martín, Cunit</div>
+                    <div class="experience-date">set 2025 - Presentar</div>
+                    <div class="experience-description">Desenvolupament d'una aplicació</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
