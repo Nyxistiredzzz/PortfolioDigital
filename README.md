@@ -133,12 +133,6 @@ Per a qualsevol consulta o col·laboració:
 - **Email**: arbarcel@gmail.com
 - **Ubicació**: Catalunya, Espanya
 
-## 🔗 Enllaços
-
-- [LinkedIn](#)
-- [GitHub](#)
-- [Twitter](#)
-
 ## 📝 Llicència
 
 Aquest projecte és part de la formació acadèmica del Cicle Formatiu de Desenvolupament d'Aplicacions Web.
