@@ -130,8 +130,7 @@ php -S localhost:8000
 
 Per a qualsevol consulta o col·laboració:
 
-- **Email**: elmeu.email@exemple.com
-- **Telèfon**: +34 123 456 789
+- **Email**: arbarcel@gmail.com
 - **Ubicació**: Catalunya, Espanya
 
 ## 🔗 Enllaços
