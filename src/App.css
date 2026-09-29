@@ -181,8 +181,18 @@
 
 .section-heading h2 {
   margin: 0;
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(2.1rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
   color: #2d1d1a;
+}
+
+.about .section-heading h2 {
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  text-transform: none;
+  max-width: 620px;
 }
 
 .project-grid {
@@ -224,8 +234,19 @@
 
 .project-body h3 {
   margin: 16px 0 10px;
-  font-size: 1.65rem;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
   color: #2a1b16;
+}
+
+.project-label {
+  margin: 0 0 10px;
+  color: #9d5a3b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .project-body p {
@@ -241,10 +262,17 @@
   gap: 18px;
 }
 
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .about p {
   color: #5d433c;
   line-height: 1.8;
   font-size: 1.05rem;
+  margin: 0;
 }
 
 .contact-box {

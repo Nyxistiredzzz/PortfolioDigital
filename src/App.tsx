@@ -5,18 +5,20 @@ import "./App.css";
 
 const projects = [
   {
-    title: "Matt Feed",
-    category: "Red social / experiencia",
+    title: "MATT — Music all the time",
+    category: "Streaming musical / producto",
     description:
-      "Diseño centrado en contenido visual, comunidad y navegación fluida para una experiencia más cercana y auténtica.",
+      "Plataforma de música pensada para dar visibilidad a artistas con pocos recursos, facilitando el descubrimiento, la escucha rápida y el apoyo directo a nuevos talentos.",
     image: feedMattImg,
+    label: "Feed principal",
   },
   {
-    title: "Matt Library",
-    category: "Biblioteca digital / producto",
+    title: "MATT — Music all the time",
+    category: "Experiencia de usuario / escucha",
     description:
-      "Plataforma para explorar colecciones, organizar referencias y ofrecer una lectura más cómoda y expresiva.",
+      "Diseño centrado en la navegación, la biblioteca personal y la conexión entre el usuario y el artista, con una experiencia clara, moderna y cercana.",
     image: libraryMattImg,
+    label: "Biblioteca y escucha",
   },
 ];
 
@@ -60,32 +62,36 @@ function App() {
 
         <section className="stats" aria-label="Resumen profesional">
           <div>
-            <strong>+2</strong>
-            <span>años de trabajo</span>
+            <strong>CFGS</strong>
+            <span>DAW</span>
           </div>
           <div>
-            <strong>12</strong>
-            <span>proyectos</span>
+            <strong>+10</strong>
+            <span>proyectos y entregas</span>
           </div>
           <div>
-            <strong>UX</strong>
-            <span>orientado a personas</span>
+            <strong>Aprendo</strong>
+            <span>cada día para crecer</span>
           </div>
         </section>
 
         <section id="proyectos" className="projects">
           <div className="section-heading">
             <p className="eyebrow">Proyectos destacados</p>
-            <h2>Ideas visuales con un enfoque real.</h2>
+            <h2>Un proyecto con propósito real.</h2>
           </div>
 
           <div className="project-grid">
             {projects.map((project) => (
-              <article key={project.title} className="project-card">
+              <article
+                key={`${project.title}-${project.label}`}
+                className="project-card"
+              >
                 <img src={project.image} alt={project.title} />
                 <div className="project-body">
                   <span className="project-tag">{project.category}</span>
                   <h3>{project.title}</h3>
+                  <p className="project-label">{project.label}</p>
                   <p>{project.description}</p>
                 </div>
               </article>
@@ -98,17 +104,27 @@ function App() {
             <p className="eyebrow">Sobre mí</p>
             <h2>Construyo experiencias con carácter.</h2>
           </div>
-          <p>
-            Me interesa crear productos digitales con identidad, claridad
-            narrativa y un trato cercano para la gente que los usa. La mezcla
-            entre diseño, creatividad y funcionalidad es lo que más me motiva.
-          </p>
+          <div className="about-copy">
+            <p>
+              Soy estudiante de Desarrollo de Aplicaciones Web y estoy buscando
+              mi primera oportunidad para entrar en el sector. He trabajado en
+              proyectos reales que me han permitido desarrollar tanto la parte
+              visual como la técnica, y cada día sigo aprendiendo con ganas para
+              mejorar, resolver problemas y aportar valor a un equipo.
+            </p>
+            <p>
+              Me interesa formar parte de un proyecto donde pueda seguir
+              creciendo, colaborar, aprender de profesionales del sector y
+              contribuir con mi motivación, curiosidad y compromiso para crear
+              productos útiles y bien hechos.
+            </p>
+          </div>
         </section>
 
         <section id="contacto" className="contact-box">
           <p className="eyebrow">Contacto</p>
           <h2>¿Quieres colaborar en tu siguiente proyecto?</h2>
-          <a href="mailto:matt@example.com">matt@example.com</a>
+          <a href="mailto:arbarcel@gmail.com">arbarcel@gmail.com</a>
         </section>
       </main>
     </div>
