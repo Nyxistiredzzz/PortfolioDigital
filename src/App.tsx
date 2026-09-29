@@ -85,10 +85,6 @@ function App() {
             <strong>+10</strong>
             <span>proyectos y entregas</span>
           </div>
-          <div>
-            <strong>Enfoque</strong>
-            <span>crecimiento continuo</span>
-          </div>
         </section>
 
         <section id="proyectos" className="projects">
