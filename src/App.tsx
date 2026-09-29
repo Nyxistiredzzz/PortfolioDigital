@@ -60,6 +60,22 @@ function App() {
           </div>
         </section>
 
+        <section className="tech-section" aria-label="Tecnologías utilizadas">
+          <p className="eyebrow">Tecnologías</p>
+          <div className="tech-list">
+            <span>Laravel</span>
+            <span>Flask</span>
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>Python</span>
+            <span>TypeScript</span>
+            <span>Claude</span>
+            <span>Codex</span>
+            <span>MCPs</span>
+          </div>
+        </section>
+
         <section className="stats" aria-label="Resumen profesional">
           <div>
             <strong>CFGS</strong>
@@ -70,8 +86,8 @@ function App() {
             <span>proyectos y entregas</span>
           </div>
           <div>
-            <strong>Aprendo</strong>
-            <span>cada día para crecer</span>
+            <strong>Enfoque</strong>
+            <span>crecimiento continuo</span>
           </div>
         </section>
 
